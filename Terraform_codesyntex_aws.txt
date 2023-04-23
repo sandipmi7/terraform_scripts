@@ -1,0 +1,147 @@
+----------------------------------------------------------  Terraform AWS Syntax -------------------------------------------------------------------------------
+
+
+ # aws_instance.example-server will be created
+  + resource "aws_instance" "example-server" {
+      + ami                                  = "ami-03a933af70fa97ad2"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = false
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "r5.xlarge"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "gitkey"
+      + monitoring                           = false
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = "subnet-007020ba1e2520fe0"
+      + tags_all                             = (known after apply)
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = [
+          + "sg-0e2f78b30e4a8821e",
+        ]
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = true
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = 10
+          + volume_type           = "standard"
+        }
+    }
+
+
+
+-------------------------------------------------------------------- Terraform AWS AFTER Syntax ----------------------------------------------------------------
+
+
+Terraform will perform the following actions:
+
+  # aws_instance.example-server will be destroyed
+  - resource "aws_instance" "example-server" {
+      - ami                                  = "ami-03a933af70fa97ad2" -> null
+      - arn                                  = "arn:aws:ec2:ap-south-1:186930598879:instance/i-0f4202db79c57c89a" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "ap-south-1b" -> null
+      - cpu_core_count                       = 2 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0f4202db79c57c89a" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "r5.xlarge" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - key_name                             = "gitkey" -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-038f4d1348a07a6cc" -> null
+      - private_dns                          = "ip-172-31-15-152.ap-south-1.compute.internal" -> null
+      - private_ip                           = "172.31.15.152" -> null
+      - public_dns                           = "ec2-13-233-96-12.ap-south-1.compute.amazonaws.com" -> null
+      - public_ip                            = "13.233.96.12" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "launch-wizard-7",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-007020ba1e2520fe0" -> null
+      - tags                                 = {} -> null
+      - tags_all                             = {} -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0e2f78b30e4a8821e",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = true -> null
+          - iops                  = 0 -> null
+          - kms_key_id            = "arn:aws:kms:ap-south-1:186930598879:key/58ffd2e6-169d-4550-9854-f4e8619ce254" -> null
+          - tags                  = {} -> null
+          - throughput            = 0 -> null
+          - volume_id             = "vol-00e5745add6a3272d" -> null
+          - volume_size           = 10 -> null
+          - volume_type           = "standard" -> null
+        }
+    }
